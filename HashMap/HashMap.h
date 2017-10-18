@@ -52,12 +52,12 @@ HashMap<K, T>::~HashMap() {
 }
 
 template<class K, class T>
-T HashMap<K, T>::get(K clave) {
+T HashMap<K,T>::get(K clave) {
     int pos = hashFuncP(clave) % tam;
     if (tabla[pos] == NULL) {
         throw 1;
     }
-    return tabla[pos]->dato;
+    return tabla[pos]->getDato();
 }
 
 template<class K, class T>
